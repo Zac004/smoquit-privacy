@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmoQuit - Privacy Policy & Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Animated Header */
+        .header {
+            text-align: center;
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(33, 150, 243, 0.1) 100%);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(76, 175, 80, 0.05) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .logo {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .smo {
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+        
+        .quit {
+            background: linear-gradient(135deg, #ff4444 0%, #ff8844 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 68, 68, 0.5);
+        }
+        
+        .subtitle {
+            color: #4CAF50;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .tagline {
+            color: #888;
+            font-size: 16px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .effective-date {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(33, 150, 243, 0.15) 100%);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #4CAF50;
+        }
+        
+        /* Sections */
+        .section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(76, 175, 80, 0.3);
+        }
+        
+        .section-icon {
+            font-size: 32px;
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(33, 150, 243, 0.2) 100%);
+        }
+        
+        .section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #4CAF50;
+            margin: 0;
+            flex: 1;
+        }
+        
+        /* Highlight Boxes */
+        .highlight {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(76, 175, 80, 0.05) 100%);
+            border-left: 5px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .warning {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.15) 0%, rgba(255, 152, 0, 0.05) 100%);
+            border-left: 5px solid #FF9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #FFB74D;
+        }
+        
+        .critical {
+            background: linear-gradient(135deg, rgba(244, 67, 54, 0.15) 0%, rgba(244, 67, 54, 0.05) 100%);
+            border-left: 5px solid #F44336;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border: 1px solid rgba(244, 67, 54, 0.3);
+        }
+        
+        .critical h3 {
+            color: #F44336;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .critical h3::before {
+            content: '⚠️';
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        /* Lists */
+        .feature-list {
+            margin: 20px 0;
+        }
+        
+        .feature-list li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #e0e0e0;
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .no-list li::before {
+            content: '✗';
+            color: #F44336;
+        }
+        
+        .bullet-list li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #cccccc;
+        }
+        
+        .bullet-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        /* Medical Disclaimer Points */
+        .disclaimer-point {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+            padding: 12px;
+            background: rgba(244, 67, 54, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid #F44336;
+        }
+        
+        .disclaimer-point::before {
+            content: '•';
+            color: #F44336;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-top: 2px;
+            font-size: 16px;
+        }
+        
+        /* Privacy Items */
+        .privacy-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .privacy-item h4 {
+            color: #4CAF50;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .privacy-item h4::before {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .privacy-item p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+        
+        /* Subsections */
+        .subsection {
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .subsection h3 {
+            color: #2196F3;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, rgba(33, 150, 243, 0.05) 100%);
+            margin-top: 60px;
+            border-top: 2px solid rgba(76, 175, 80, 0.3);
+        }
+        
+        .footer .logo {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-tagline {
+            color: #4CAF50;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .footer-subtitle {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* Links */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #66BB6A;
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .logo {
+                font-size: 48px;
+            }
+            
+            .section {
+                padding: 25px 20px;
+            }
+            
+            .section-icon {
+                font-size: 24px;
+                width: 40px;
+                height: 40px;
+            }
+            
+            .section h2 {
+                font-size: 24px;
+            }
+        }
+        
+        /* Smooth scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4CAF50 0%, #2196F3 100%);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 1000;
+            transition: transform 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="smo">Smo</span><span class="quit">Quit</span>
+            </div>
+            <div class="subtitle">Privacy Policy & Terms of Service</div>
+            <div class="tagline">Complete Legal Documentation</div>
+        </div>
+        
+        <div class="effective-date">
+            📅 <strong>Effective Date:</strong> January 15, 2025 | Last Updated: January 15, 2025
+        </div>
+        
+        <!-- Privacy Commitment -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🛡️</div>
+                <h2>Our Privacy Commitment</h2>
+            </div>
+            <div class="highlight">
+                <strong>SmoQuit is built with privacy-first principles.</strong> All your data stays on your device only. We do not collect, store, or transmit any personal information to external servers.
+            </div>
+            <p>Your privacy and data security are fundamental to our design philosophy. This application operates completely offline regarding your personal data, ensuring maximum privacy protection.</p>
+        </div>
+        
+        <!-- Effective Date & Agreement -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">📋</div>
+                <h2>Effective Date & Agreement</h2>
+            </div>
+            <p>This Terms of Service and Privacy Policy is effective as of <strong>January 15, 2025</strong>.</p>
+            <p>By downloading, installing, or using SmoQuit, you acknowledge that you have read, understood, and agree to be bound by these terms and our privacy policy.</p>
+            <div class="warning">
+                <strong>Important:</strong> If you do not agree to these terms, please do not use this application.
+            </div>
+        </div>
+        
+        <!-- Medical Disclaimer -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">⚕️</div>
+                <h2>CRITICAL: Medical Disclaimer</h2>
+            </div>
+            <div class="critical">
+                <h3>MEDICAL DISCLAIMER</h3>
+                <div class="disclaimer-point">SmoQuit is NOT a medical device, medical application, or medical treatment of any kind.</div>
+                <div class="disclaimer-point">This application is designed solely for motivational and educational purposes related to smoking cessation.</div>
+                <div class="disclaimer-point">All health information, recovery timelines, and statistics shown are general population data and may not apply to your individual circumstances.</div>
+                <div class="disclaimer-point">This application is NOT a substitute for professional medical advice, diagnosis, treatment, or care.</div>
+                <div class="disclaimer-point">You should ALWAYS consult with your physician or qualified healthcare provider before making any decisions related to smoking cessation.</div>
+                <div class="disclaimer-point">Never disregard professional medical advice or delay seeking medical care because of information provided by this application.</div>
+                <div class="disclaimer-point">If you experience any adverse health effects during smoking cessation, seek immediate medical attention.</div>
+                <div class="disclaimer-point">The developers of this application are not medical professionals and provide no medical advice or guarantees.</div>
+            </div>
+            <div class="warning">
+                <strong>Health Information Disclaimer:</strong> All health recovery information, statistics, and timelines presented in this application are based on published medical research and general population studies. Individual results may vary significantly based on personal health factors, age, smoking history, and other medical conditions.
+            </div>
+        </div>
+        
+        <!-- App Purpose -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">📱</div>
+                <h2>Application Purpose & Functionality</h2>
+            </div>
+            <p>SmoQuit is a motivational tool designed to support your smoking cessation journey through:</p>
+            
+            <div class="privacy-item">
+                <h4>📊 Progress Tracking</h4>
+                <p>Local tracking of your quit journey with timers, counters, and milestone visualization.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>💰 Financial Motivation</h4>
+                <p>Calculation of potential money saved to provide additional motivation for continued abstinence.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>🔔 Reminder System</h4>
+                <p>Optional local notifications with encouragement and evidence-based coping strategies.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>🏆 Achievement System</h4>
+                <p>Gamified milestone recognition to celebrate progress and maintain long-term motivation.</p>
+            </div>
+            
+            <div class="critical">
+                <strong>IMPORTANT:</strong> SmoQuit is strictly a motivational and educational tool. It does not provide medical treatment, medical monitoring, or medical advice of any kind.
+            </div>
+        </div>
+        
+        <!-- Data Collection & Privacy -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🔒</div>
+                <h2>Data Collection & Privacy</h2>
+            </div>
+            <p>SmoQuit is designed with privacy-by-design principles. All data is stored locally on your device only.</p>
+            
+            <div class="subsection">
+                <h3>DATA WE STORE LOCALLY:</h3>
+                <ul class="feature-list">
+                    <li><strong>Timeline Information:</strong> Start date of your quit journey and timestamps of resistance/lapse events for progress calculation only.</li>
+                    <li><strong>Financial Preferences:</strong> Cigarette cost estimate and currency preference for savings calculations. No banking or payment information.</li>
+                    <li><strong>Notification Settings:</strong> Your chosen notification schedule and custom reminder times for local notification scheduling only.</li>
+                    <li><strong>Application Preferences:</strong> Interface settings such as haptic feedback, currency selection, and display preferences.</li>
+                    <li><strong>Personal Goals:</strong> Financial or personal goals you set for motivation. Never transmitted externally.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>DATA WE DO NOT COLLECT:</h3>
+                <ul class="feature-list no-list">
+                    <li>No personal identification information</li>
+                    <li>No health data transmission or monitoring</li>
+                    <li>No usage analytics or tracking</li>
+                    <li>No third-party data sharing</li>
+                    <li>No location data or device identifiers</li>
+                    <li>No contact information or social media data</li>
+                    <li>No crash reports or error logs sent externally</li>
+                    <li>No advertising identifiers or marketing data</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Health Information -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">❤️</div>
+                <h2>Health Information & Medical Data</h2>
+            </div>
+            <div class="critical">
+                <strong>CRITICAL CLARIFICATION:</strong> SmoQuit is not a medical application and does not collect, process, store, or transmit any health data or medical information.
+            </div>
+            
+            <div class="privacy-item">
+                <h4>📈 General Research Data Only</h4>
+                <p>Health recovery timelines and statistics shown are based on published medical research and population studies, not your personal health information.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>🚫 No Health Monitoring</h4>
+                <p>This application does not monitor, track, or record your health status, vital signs, medical conditions, or physical symptoms.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>⚠️ Individual Results Variable</h4>
+                <p>All health information displayed is for general educational and motivational purposes only. Your actual health outcomes may differ significantly.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>🩺 Professional Medical Care Required</h4>
+                <p>For actual health monitoring, medical advice, or smoking cessation treatment, consult qualified healthcare professionals.</p>
+            </div>
+        </div>
+        
+        <!-- Third-Party Services -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🏢</div>
+                <h2>Third-Party Services & External Dependencies</h2>
+            </div>
+            <p>SmoQuit is completely self-contained and uses <strong>NO external third-party services:</strong></p>
+            
+            <ul class="feature-list no-list">
+                <li>No analytics or tracking services (Google Analytics, Firebase, etc.)</li>
+                <li>No advertising networks, ad trackers, or marketing platforms</li>
+                <li>No social media integrations or sharing platforms</li>
+                <li>No crash reporting or error tracking services</li>
+                <li>No customer support platforms or helpdesk systems</li>
+                <li>No payment processors or financial service integrations</li>
+                <li>No external APIs, web services, or database connections</li>
+                <li>No third-party SDKs or external code libraries with data access</li>
+            </ul>
+            
+            <div class="highlight">
+                The only external dependencies are Apple's App Store for application distribution and Apple's iCloud for optional data synchronization (both controlled entirely by Apple's privacy policies, not ours).
+            </div>
+        </div>
+        
+        <!-- Your Rights & Data Control -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🔑</div>
+                <h2>Your Rights & Data Control</h2>
+            </div>
+            <p>You have complete control over your data:</p>
+            
+            <div class="privacy-item">
+                <h4>🗑️ Complete Data Deletion</h4>
+                <p>You can permanently delete all your data instantly from the application settings. Once deleted, data cannot be recovered by you or anyone else.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>👁️ Data Transparency</h4>
+                <p>All stored data is visible and accessible within the application interface. No hidden data collection.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>📤 Data Portability</h4>
+                <p>All data remains under your control on your device. You can backup or transfer data according to your device's capabilities.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>🛡️ Privacy Protection Guarantee</h4>
+                <p>We commit to never weakening our privacy protections. Any policy changes will maintain or strengthen existing privacy safeguards.</p>
+            </div>
+        </div>
+        
+        <!-- Children's Privacy -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">👶</div>
+                <h2>Children's Privacy Protection</h2>
+            </div>
+            <p>This application is designed exclusively for adults aged 18 and older who are attempting to quit smoking. We do not knowingly collect data from minors under 13 years of age or teenagers under 18 years of age.</p>
+            <div class="warning">
+                If you are under 18, please do not use this application and seek appropriate support through your parents, guardians, or healthcare providers.
+            </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">📞</div>
+                <h2>Contact Information & Support</h2>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>❓ Privacy & Legal Questions</h4>
+                <p>For questions about this Terms of Service and Privacy Policy, contact us through the App Store. Note: we cannot access your personal data to provide technical assistance.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>🔧 Technical Support</h4>
+                <p>For technical issues, use the application's built-in feedback feature or App Store reviews. Do not include personal information in support requests.</p>
+            </div>
+            
+            <div class="privacy-item">
+                <h4>🚨 Medical Emergency Disclaimer</h4>
+                <p>For medical emergencies or urgent health concerns related to smoking cessation, contact emergency services or your healthcare provider immediately. Do not rely on this application for medical assistance.</p>
+            </div>
+        </div>
+        
+        <!-- Legal Terms & Disclaimers -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">⚖️</div>
+                <h2>Legal Terms & Disclaimers</h2>
+            </div>
+            
+            <div class="subsection">
+                <h3>LIMITATION OF LIABILITY</h3>
+                <p>SmoQuit is provided "as is" without any warranties, express or implied. We are not liable for any health outcomes, medical consequences, financial decisions, smoking cessation results, or other direct or indirect consequences arising from use of this motivational application. This application is not a medical treatment and provides no guarantees regarding smoking cessation success rates or health improvements.</p>
+            </div>
+            
+            <div class="subsection">
+                <h3>USER RESPONSIBILITY & INDEMNIFICATION</h3>
+                <p>By using this application, you acknowledge that smoking cessation is a personal health decision that should be made in consultation with qualified healthcare providers. You agree to indemnify and hold harmless the application developers, distributors, and associated parties from any claims, damages, expenses, or liabilities arising from your use of the application or reliance on its information.</p>
+            </div>
+            
+            <div class="subsection">
+                <h3>GOVERNING LAW & DISPUTE RESOLUTION</h3>
+                <p>These Terms of Service and Privacy Policy are governed by the laws of your local jurisdiction. Any disputes will be resolved in accordance with applicable local laws and Apple's App Store Terms and Conditions. If any provision of these terms is found to be unenforceable, the remaining provisions will remain in full effect.</p>
+            </div>
+            
+            <div class="subsection">
+                <h3>ENTIRE AGREEMENT</h3>
+                <p>This document constitutes the complete Terms of Service and Privacy Policy between you and SmoQuit. It supersedes all prior agreements, understandings, or representations regarding the application. No modifications to these terms are valid unless made through an official application update.</p>
+            </div>
+        </div>
+        
+        <!-- Changes to Policy -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <h2>Changes to This Policy</h2>
+            </div>
+            <p>Any privacy policy updates will be released with app version updates. Continued use of the application after policy updates constitutes acceptance of the updated terms and privacy policy.</p>
+            <div class="highlight">
+                We will never weaken our privacy protections. Any changes will maintain or strengthen existing privacy safeguards.
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="logo">
+            <span class="smo">Smo</span><span class="quit">Quit</span>
+        </div>
+        <div class="footer-tagline">Break Free from Smoking Forever</div>
+        <div class="footer-subtitle">Privacy-First • Local Storage • No Tracking • Medical Disclaimer Compliant</div>
+    </div>
+    
+    <script>
+        // Smooth scroll progress indicator
+        window.addEventListener('scroll', function() {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollIndicator').style.transform = `scaleX(${scrolled / 100})`;
+        });
+        
+        // Smooth hover effects
+        document.querySelectorAll('.section').forEach(section => {
+            section.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            section.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
